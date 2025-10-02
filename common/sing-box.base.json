@@ -10,11 +10,9 @@
         "servers": [
             {
                 "tag": "dns_1",
-                "address": "https://1.1.1.1/dns-query"
-            },
-            {
-                "tag": "dns_block",
-                "address": "rcode://refused"
+                "type": "https",
+                "server": "1.1.1.1",
+                "detour": "proxy"
             }
         ],
         "rules": [],

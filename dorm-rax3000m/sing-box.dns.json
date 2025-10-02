@@ -3,15 +3,12 @@
         "servers": [
             {
                 "tag": "dns_westlake",
-                "address": "10.10.10.10",
+                "type": "udp",
+                "server": "10.10.10.10",
                 "detour": "direct-out"
             }
         ],
         "rules": [
-            {
-                "outbound": "any",
-                "server": "dns_westlake"
-            },
             {
                 "query_type": "PTR",
                 "server": "dns_westlake"
