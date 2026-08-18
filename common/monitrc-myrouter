@@ -1,7 +1,7 @@
 
-check process ssh-backdoor with pidfile /var/run/myrouter-frpc.pid
-    start program = "/etc/myrouter/myfrpc.sh start"
-    stop program = "/etc/myrouter/myfrpc.sh stop"
+#check process ssh-backdoor with pidfile /var/run/myrouter-frpc.pid
+#    start program = "/etc/myrouter/myfrpc.sh start"
+#    stop program = "/etc/myrouter/myfrpc.sh stop"
 
 check process sing-box with pidfile /var/run/myrouter-sing-box.pid
     start program = "/etc/myrouter/sing-box.sh start"
