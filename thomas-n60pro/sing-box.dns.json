@@ -1,0 +1,67 @@
+{
+    "dns": {
+        "servers": [
+            {
+                "tag": "dns_ali",
+                "type": "udp",
+                "server": "223.5.5.5",
+                "detour": "direct-out"
+            },
+            {
+                "tag": "dns_dnsmasq",
+                "type": "udp",
+                "server": "127.0.0.1",
+                "detour": "direct-out"
+            }
+        ],
+        "rules": [
+            {
+                "query_type": "PTR",
+                "server": "dns_ali"
+            },
+            {
+                "domain_suffix": [
+                    "atlake.link",
+                    "lake.link",
+                    "doesn-t.work",
+                    "lklk.tech",
+                    "yif.fyi",
+                    "ft2.ltd",
+                    "githubusercontent.com"
+                ],
+                "server": "dns_ali"
+            },
+            {
+                "rule_set": [
+                    "geosite-google"
+                ],
+                "server": "dns_1"
+            },
+            {
+                "rule_set": [
+                    "geosite-cn",
+                    "geosite-apple@cn",
+                    "geosite-microsoft@cn",
+                    "geosite-category-games@cn"
+                ],
+                "server": "dns_ali"
+            },
+            {
+                "domain_suffix": [
+                    "steamcontent.com",
+                    "steamserver.net",
+                    "aki-game.net",
+                    "kurogame.xyz",
+                    "marmot-cloud.com",
+                    "bing.com"
+                ],
+                "server": "dns_ali"
+            }
+        ]
+    },
+    "route": {
+        "default_domain_resolver": {
+            "server": "dns_ali"
+        }
+    }
+}

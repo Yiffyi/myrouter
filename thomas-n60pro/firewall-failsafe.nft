@@ -1,0 +1,11 @@
+#!/usr/sbin/nft -f
+
+table inet myrouter;
+# flush table inet myrouter;
+delete table inet myrouter;
+
+table inet myrouter {
+    chain prerouting {
+        type filter hook prerouting priority dstnat+5; policy accept;
+    }
+}
