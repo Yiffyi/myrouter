@@ -1,0 +1,79 @@
+{
+    "dns": {
+        "servers": [
+            {
+                "tag": "dns_ali",
+                "address": "223.5.5.5",
+                "detour": "direct-out"
+            },
+            {
+                "tag": "dns_dnsmasq",
+                "address": "127.0.0.1",
+                "detour": "direct-out"
+            },
+            {
+                "tag": "dns_1ncore",
+                "address": "6.6.6.6",
+                "detour": "direct-out"
+            }
+        ],
+        "rules": [
+            {
+                "outbound": "any",
+                "server": "dns_ali"
+            },
+            {
+                "query_type": "PTR",
+                "server": "dns_ali"
+            },
+            {
+                "domain_suffix": [
+                    "1ncore.lan"
+                ],
+                "server": "dns_1ncore"
+            },
+            {
+                "domain_suffix": [
+                    "atlake.link",
+                    "doesn-t.work",
+                    "lklk.tech",
+                    "yif.fyi"
+                ],
+                "server": "dns_ali"
+            },
+            {
+                "rule_set": [
+                    "geosite-google"
+                ],
+                "server": "dns_1"
+            },
+            {
+                "rule_set": [
+                    "geosite-cn",
+                    "geosite-apple@cn",
+                    "geosite-microsoft@cn",
+                    "geosite-category-games@cn"
+                ],
+                "server": "dns_ali"
+            },
+            {
+                "domain_suffix": [
+                    "steamcontent.com",
+                    "steamserver.net",
+                    "aki-game.net",
+                    "kurogame.xyz",
+                    "bing.com"
+                ],
+                "server": "dns_ali"
+            },
+            {
+                "domain_suffix": [
+                    "doesn-t.work",
+                    "yif.fyi",
+                    "githubusercontent.com"
+                ],
+                "server": "dns_ali"
+            }
+        ]
+    }
+}
