@@ -4,7 +4,7 @@ ip rule add fwmark 1100 table 1100 pref 30100
 ip route add local default dev lo table 1100
 
 # process other routes, only hold default
-ip rule add from all table main suppress_prefixlength 0 pref 30000
+ip rule add from all table main suppress_prefixlength 0 pref 19000
 # go through our default routes
 ip rule add fwmark 1000 table main pref 30100
 ip rule add fwmark 1001 table 1001 pref 30100
