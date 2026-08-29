@@ -60,11 +60,18 @@
             },
             {
                 "domain_suffix": [
-                    "scholar.googleusercontent.com",
-                    "scholar.google.com"
+                    // "kurogame-service.com"
+                    "sdkapi.kurogame-service.com"
                 ],
-                "outbound": "special"
+                "outbound": "hy2,aws-tok,out"
             },
+            //{
+            //    "domain_suffix": [
+            //        "scholar.googleusercontent.com",
+            //        "scholar.google.com"
+            //    ],
+            //    "outbound": "special"
+            //},
             {
                 "rule_set": [
                     "geosite-google"
@@ -83,11 +90,12 @@
             },
             {
                 "domain_suffix": [
+                    "aki-game.net",
+                    "aki-game2.net",
+                    "kurogames.net",
+                    "kurogame.xyz",
                     "steamcontent.com",
                     "steamserver.net",
-                    "aki-game.net",
-                    "kurogame.xyz",
-                    "sharepoint.com",
                     "bing.com"
                 ],
                 "outbound": "direct-out"
